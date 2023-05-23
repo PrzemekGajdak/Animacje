@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE-edge"> 
+      <meta name= "viewport" content="width=device=width, initial-scale=1.0"> 
+      ‹<title>Animacje</title>
+    <style>
+
+    #ball{
+    width : 60px;
+    height:60px;
+    background-color: red;
+    border-radius: 50%;
+    animation: animacja 1s infinite ease-in alternate;
+    position: absolute;
+    }
+    #ball-container {
+    left: 5px;
+    width: 250px;
+    height: 350px;
+    border-radius: 5%;
+    margin: 20px;
+    position: absolute;
+    justify-content: center;
+    background-color: grey;
+}
+    @keyframes animacja {
+    from {top: 250px;left: 110px; width: 60px;}
+    to {top: 520px;left: 110px;width: 85px; }
+    }
+    #shadow{
+    left: 110px;
+    top: 550px;
+    width: 10px;
+    height: 30px;
+    position: absolute;
+    border-radius: 50%;
+    animation: cien-anim 1s infinite alternate ease-in;
+    }
+    @keyframes cien-anim {
+    from {background-color: white; filter: blur (10px); width: 60px;}
+    to {background-color: grey; filter: blur (10px); width: 85px;}
+    }
+   
+  #face-container{
+    left: 280px;
+    position: absolute;
+    width: 250px;
+    height: 350px;
+    border-radius: 5%;
+    margin: 20px;
+}
+#face-container img {
+    border-radius: 5%;
+    width: 250px;
+    height: 350px;
+}
+#tree-container {    
+    left: 820px;
+    position: absolute;                                                                                                                                                                                                                                                   
+    width: 250px;
+    height: 350px;
+    border-radius: 5%;
+    margin: 20px;
+}
+#tree-container img {
+    border-radius: 5%;
+    width: 250px;
+    height: 350px;
+   
+}
+#rysunek-container {                                                                                                                                                                                                                                                       
+    width: 300px;
+    height: 500px;
+    border-radius: 5%;
+    margin: 20px;
+}
+#rysunek-container img {
+    border-radius: 5%;
+    width: 400px;
+    height: 500px;
+}
+body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    background-color:#112c39;
+}
+#rysunek{
+            left: 200px;
+            fill:palevioletred;
+            animation: kolor 2s infinite ease ;
+            stroke-dasharray: 10;
+            stroke-dashoffset: 100; 
+            stroke:black;
+            stroke-width: 5;
+        }
+        @keyframes kolor{
+            from{fill: red;}
+            to{fill: green;}
+        } 
+#rysuneksvg-container{ 
+        
+        left: 550px;
+        width: 250px;
+        height: 350px;
+        border-radius: 5%;
+        margin: 20px;
+        position: absolute;
+        display: flex;
+        border-style:solid;
+        border-color: white;
+     }
+     .video-container {
+            left: 620px;
+            top: 2px;
+            width: 250px;
+            height: 350px;
+            border-radius: 5%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .video-container video {
+            left: 620px;
+            top: 2px;
+            width: 100%;
+            height: 100%;
+            border-radius: 5%;
+            object-fit: cover;
+        }
+    </style> 
+</head> 
+<body>  
+    <div class="video-container">
+        <video controls loop>
+            <source src="animacjahuman.mp4" type="video/mp4">
+            Twoja przeglądarka nie obsługuje odtwarzacza wideo.
+        </video>
+    </div>
+    <div id="ball-container"></div>
+    <div id="face-container">
+        <img src="./animacjaface.gif">
+    </div>
+    <div id="shadow"></div>
+    <div id="ball"></div>
+    <div id="tree-container">
+        <img src="./drzewo.gif">
+    </div>
+    <div id="rysuneksvg-container"></div>
+    <svg
+    width="210"
+    height="297"
+    fill="none">
+     <path id="rysunek"
+         d="M 95.572013,45.141025 C 58.542266,97.335334 83.581429,140.71303 83.581429,140.71303 c -29.797645,1.50611 -57.753858,36.13218 -62.06891,59.95294 64.553638,-1.71072 68.050568,-51.55998 71.943508,-43.73038 14.616863,6.62707 31.386583,35.62546 87.813393,32.79778 -28.53644,-42.72221 -38.76238,-41.61606 -77.9388,-46.55168 21.9155,-35.74293 7.03374,-66.886211 -7.758607,-98.040665 z"
+        
+     />
+    </svg>
+    </body> 
+    </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
